@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="URL을 QR 코드로 만듭니다." />
+    <title>QR Maker</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <img class="logo" src="img/logo.png" alt="로고" />
+    <main>
+      <section class="maker" aria-labelledby="title">
+        <div id="qr-wrap">
+          <div id="qr" role="button" tabindex="0" aria-label="QR 코드 JPG 파일 다운로드"></div>
+          <p class="download-note">QR 코드를 클릭하면 JPG 파일로 저장됩니다.</p>
+        </div>
+        <div class="intro">
+          <h1 id="title">QR Maker</h1>
+          <p>URL을 입력해 QR 코드를 만들어 보세요.</p>
+        </div>
+        <form id="form" novalidate>
+          <input id="url" type="url" inputmode="url" placeholder="https://example.com" aria-label="URL 입력" required autofocus />
+          <button type="submit">확인</button>
+        </form>
+        <div id="error" role="alert"></div>
+      </section>
+    </main>
+  </body>
+</html>

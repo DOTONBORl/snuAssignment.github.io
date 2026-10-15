@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="긴 URL을 짧은 URL로 만듭니다." />
+    <title>URL 단축</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="back" href="../index.html">← URL Tools</a>
+    <main>
+      <section class="shortener" aria-labelledby="title">
+        <p class="eyebrow">URL SHORTENER</p>
+        <h1 id="title">URL 단축</h1>
+        <p class="description">긴 URL을 입력하면 짧은 주소를 만들어 드립니다.</p>
+        <form id="form" novalidate>
+          <label for="url">URL입력</label>
+          <div class="input-row">
+            <input id="url" type="url" inputmode="url" placeholder="https://example.com" autocomplete="url" required />
+            <button id="shorten" type="submit" disabled>단축하기</button>
+          </div>
+          <p id="error" role="alert"></p>
+        </form>
+        <label for="result">단축 URL</label>
+        <div class="result-row">
+          <input id="result" type="text" readonly placeholder="단축된 URL이 여기에 표시됩니다." />
+          <button id="copy" type="button" disabled>복사</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
